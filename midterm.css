@@ -1,0 +1,506 @@
+:root{
+    --main-color:saddlebrown;
+    --bg:#F7F7F7;
+    --black:#192a56;
+    --white:ghostwhite;
+    --bgcolor:#faebd7;
+    --border: .1rem solid rgba(0, 0, 0, .3);
+    --box-shadow:0.5rem .2rem rgba(0, 0, 0, .3  );
+}
+*{
+    font-family: Verdana, sans-serif;
+    margin: 0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;  border: none;
+    transition: all .3s ease-in;
+    text-transform: capitalize;
+    list-style: none;
+}
+html{
+    font-size: 65.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+body{
+    margin-top:6.5rem;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+
+header .navbar{
+    height: 6.5rem;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    color: var(--main-color);
+    display: flex;
+    padding: 1rem 10%;
+    justify-content: space-between;
+    align-items: center;
+    background:rgba(248, 248, 255, .7);
+    border-bottom: var(--black);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+} 
+
+header .navbar .icon-container{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+}
+
+header .navbar .icon-container img{
+    width: 50px;
+    animation: rotate 5s infinite;
+}
+@keyframes rotate{
+    to{
+        transform: rotate(360deg);
+    }
+
+}
+
+header .navbar .link{
+    color: var(--main-color);
+    margin-right: 10px;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+    padding: 5px;
+}
+
+header .navbar .link:hover{
+    color: var(--bg);
+    background-color: var(--main-color);
+
+}
+
+header .navbar .icons i{
+    cursor: pointer;
+    width: 4rem;
+    box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 10px;
+    height: 4rem;
+    line-height: 4rem;
+    color: var(--main-color);
+    font-size: 1.5rem;
+    margin-left: .5rem;
+    text-align: center;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+header .navbar .icons i:hover,
+header .navbar .icons .menu-bars a{
+    box-shadow: inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+    color: var(--bg);
+    transform: scaleY(1);
+    position: relative;
+    background-color: rgba(15, 7, 1, 0.5);
+    
+}
+
+.menu-bars{
+    position: absolute;
+    top: 4.2rem; right: 0; left: 100% ;
+    font-size: 2rem;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    height: 25px;
+    transition: 1s ease-in-out;
+}
+
+
+.menu-bars a{
+    color: blue;
+    display: block;
+    margin-top: 2px;
+    border-radius: 2px;
+}
+ .navbar .icons .menu-bars a:hover{
+    letter-spacing: .5px;
+    color: var(--bg);
+    background-color: var(--main-color);
+}
+
+.hme{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+.home {
+    min-height: 100vh;
+    background: url(background.jpeg);
+    align-items: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.home .content{
+    margin-top: 75px;
+    float: right;
+    max-width: 60rem;
+}
+
+.home .content h3{
+    font-size: 5.5rem;
+    text-transform: uppercase;
+    color:var(--main-color);
+    text-shadow: black 3px 3px 5px;
+}
+
+.home .content p{
+    position: relative;
+    left: 20px;
+    text-shadow: white 2px 2px 5px;
+    max-width: 50rem;
+    font-size: 1.5rem;
+    color:var(--main-color);
+    font-weight:lighter;
+    line-height:2rem;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 1) 2px 2px 5px;
+    background-color: rgba(250, 235, 215, .3);
+    padding: 1rem 1rem;
+}
+
+.home .content a{
+    color: var(--main-color);
+    background-color:var(--bgcolor);
+    font-size: 1.5rem;
+    line-height: 9rem;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    left: 30%;
+    box-shadow: rgba(0, 0, 0, 1) 3px 3px 10px; ;
+}
+
+.home .content a:hover{
+    box-shadow: inset rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    letter-spacing: .5px;
+    color: var(--bg);
+    background-color: var(--main-color);
+}
+.coffees .box{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    padding: 10px 0px;
+    justify-content: center;
+} 
+.coffees .box .container{
+    justify-content: center;
+    width: 270px;
+    height: 330px;
+    margin-left: 6rem ;
+    border-radius: 5px;
+    box-shadow: rgba(25, 42, 86, 0.7) 3px 3px 10px;
+    padding: 0px;
+    border:2px solid rgba(25, 42, 86, 0.7);
+}
+
+.coffees .box .container:hover{
+    box-shadow:inset rgba(25, 42, 86, 0.7) 3px 3px 10px;
+
+    background-color: #ccc;
+}
+
+.coffees .box .container img{ 
+    width: 200px;
+    margin-top: 2rem;
+    height: 200px;
+}
+.coffees .box .container img:hover{
+    width: 190px;
+    height: 190px; 
+}
+
+
+.coffees .box .container h4{ 
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.coffees .box .container p{
+    font-size: 1.5rem;
+    line-height: 3rem;
+} 
+
+.coffees .box .container p span{
+    text-decoration: line-through;
+    font-size: 1rem;
+
+} 
+
+
+.coffees .box .container a{
+    padding: 7px 20px;
+    font-size: 1.2rem;
+    line-height: 3rem;
+    color: var(--main-color);
+    border-radius: 1rem;
+    background-color: var(--bgcolor);
+}
+
+.coffees .box .container a:hover{
+    color: var(--bg);
+    background-color: var(--main-color);
+}
+
+.abt{
+    text-align: center;
+    font-size: 7rem;
+    margin: 15px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.about{
+    min-height: calc(100vh - 17rem);
+    display: flex;
+    margin:10px 10rem;
+    padding: 10px;
+    border:2px solid rgba(0, 51, 102, 0.3);
+}
+
+.about img{
+    border-radius: 20%;
+    box-shadow: rgba(0, 0, 0, 0.7) 3px 3px 10px;
+    border: .2rem solid rgba(0, 51, 102, 0.3);
+}
+
+.about img:hover{
+    border-radius: 20%;
+    box-shadow: inset rgba(0, 0, 0, 0.7) 3px 3px 10px;
+    border: .2rem solid rgba(0, 51, 102, 0.3);
+}
+
+.about .content{
+    text-align: justify;
+    margin-left: 30px;
+    width: 120vh;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.about .content .quote{
+    background-color: rgba(245, 245, 245, 0.2);
+    padding: 5px 3px;
+    border-radius: 5px;
+}
+
+.about .content p, h3{
+    margin-top: 1.5rem;
+}
+
+.about .content a{
+    padding: 10px 30px;
+    position: relative;
+    top: 2rem;
+    left: 28rem;
+    color: var(--main-color);
+    box-shadow: rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    background-color: var(--bgcolor);
+    border-radius:10px ;
+}
+
+.about .content a:hover{
+    letter-spacing: .5px;
+    color: var(--bg);
+    box-shadow: inset rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    background-color: var(--main-color);
+}
+
+.roasting h1{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.roasting h3{
+    text-align: center;
+    font-size: 3rem;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: var(--main-color) 3px 3px 7px;
+}
+
+.roasting p{
+    margin: 0 2rem;
+    letter-spacing: 1px;
+}
+
+.roasting .box{ 
+    border-top: .5rem dotted rgba(0, 0, 0, 0.7);
+    height: 64vh;
+    display: flex;
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+.roasting .box img{
+    flex: 1 1 45rem;
+    object-fit: cover;
+}
+
+.roasting .box p{
+    flex: 1 1 45rem;
+}
+
+.grinding .grind{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.grinding p{
+    margin: 0 2rem;
+    letter-spacing: 1px;
+}
+
+.grinding .box{
+    border-top: .5rem dotted rgba(0, 0, 0, 0.7);
+    height: 71vh;
+    display: flex;
+    padding: 10px;
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.grinding .box p{
+    flex: 1 1 45rem;
+}
+
+.grinding .box img{
+    flex: 1 1 45rem;
+    object-fit: cover;
+}
+
+footer{
+    text-align: center;
+    height: 2rem;
+    margin: 2px 0px;
+    border-top: 1.5px solid rgba(0, 0, 0, 0.7);
+    font-size: 1.3rem;
+}
+
+footer p{
+    padding: 10px;
+    margin: 2px 0px;
+}
+
+footer span{
+    color: var(--black)
+}
+
+footer span:hover{
+    letter-spacing: .5rem;
+}
+
+.brewing{
+    margin: 5px;
+}
+
+.brewing h1{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.brewing .box{
+    height: 71vh;
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.brewing img{
+    flex: 1 1 400px;
+    width: 300px;
+}
+
+.brewing .content{
+    margin: 10px 0px;
+    justify-content: justify;
+    flex: 1 1 400px;
+    width: 400px;
+    font-size: 1.4rem;
+}
+
+.brewing .content h3{
+    margin: 5px 0px;
+}
+
+.boiling h1{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.boiling .box{
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    height: 71vh;
+    gap: 1rem;
+} 
+
+.boiling img{
+    flex: 1 1 71vh;
+}
+
+.boiling .content{
+        flex: 1 1 71vh;
+        font-size: 1.5rem;
+}
+
+.steeping h1{
+    text-align: center;
+    font-size: 7rem;
+    margin: 10px 0px;
+    color: var(--main-color);
+    text-shadow:  rgba(0, 0, 0, 0.9) 3px 3px 10px;
+    box-shadow:inset rgba(0, 0, 0, 0.5) 3px 3px 10px;
+}
+
+.steeping .box img{
+    flex: 1 1 71vh;
+    width: 100px;
+    height: 80%;
+
+}
+
+.steeping .box{
+    align-items: center;
+    display: flex;
+    margin: 10px;
+    height: 71vh;
+    gap: 1.5rem;
+}
+
+.steeping .box .content{
+    flex: 1 1 71vh;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
